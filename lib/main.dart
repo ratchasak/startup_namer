@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
+import 'test.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -11,7 +13,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.white,
       ),
-      home: RamdomWords(),
+      // home: RamdomWords(),
+      initialRoute: '/',
+      routes: {
+        '/': (BuildContext ctx) => RamdomWords(),
+        '/test': (BuildContext ctx) => TestWidget(),
+      },
     );
   }
 }
