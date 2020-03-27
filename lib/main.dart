@@ -1,11 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
 
-import 'test.dart';
+import 'my_widget.dart';
+import 'random_words.dart';
+import 'test_widget.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int _selectedIndex = 0;
+  static const TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  final List<Widget> _widgetOptions = <Widget>[
+    MyWidget(),
+    RandomWords(),
+    TestWidget(),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,105 +33,62 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.white,
       ),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('BottomNavigationBar Sample'),
+        ),
+        body: Center(
+          child: _widgetOptions.elementAt(_selectedIndex),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text('Home'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.business),
+              title: Text('Business'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.school),
+              title: Text('School'),
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.amber[800],
+          onTap: _onItemTapped,
+        ),
+      ),
       // home: RamdomWords(),
-      initialRoute: '/',
-      routes: {
-        '/': (BuildContext ctx) => RamdomWords(),
-        '/test': (BuildContext ctx) => TestWidget(),
-      },
-    );
-  }
-}
-
-class RamdomWords extends StatefulWidget {
-  @override
-  _RamdomWordsState createState() => _RamdomWordsState();
-}
-
-class _RamdomWordsState extends State<RamdomWords> {
-  final List<WordPair> _suggestions = <WordPair>[];
-  final Set<WordPair> _saved = Set<WordPair>();
-  final TextStyle _biggerFont = TextStyle(fontSize: 18.0);
-
-  Widget _buildSuggestions() {
-    return ListView.builder(
-      padding: EdgeInsets.all(16.0),
-      itemBuilder: (context, i) {
-        if (i.isOdd) return Divider();
-        final index = i ~/ 2;
-        if (index >= _suggestions.length) {
-          _suggestions.addAll(generateWordPairs().take(10));
-        }
-        return _buildRow(_suggestions[index]);
-      },
-    );
-  }
-
-  Widget _buildRow(WordPair pair) {
-    final bool alreadySaved = _saved.contains(pair);
-
-    return ListTile(
-      title: Text(
-        pair.asPascalCase,
-        style: _biggerFont,
-      ),
-      trailing: Icon(
-        alreadySaved ? Icons.favorite : Icons.favorite_border,
-        color: alreadySaved ? Colors.red : null,
-      ),
-      onTap: () {
-        setState(() {
-          if (alreadySaved) {
-            _saved.remove(pair);
-          } else {
-            _saved.add(pair);
-          }
-        });
-      },
-    );
-  }
-
-  void _pushSaved() {
-    Navigator.of(context).push(
-      MaterialPageRoute<void>(
-        builder: (BuildContext context) {
-          final Iterable<ListTile> tiles = _saved.map(
-            (WordPair pair) {
-              return ListTile(
-                title: Text(
-                  pair.asPascalCase,
-                  style: _biggerFont,
-                ),
-              );
-            },
-          );
-          final List<Widget> divided = ListTile.divideTiles(
-            context: context,
-            tiles: tiles,
-          ).toList();
-          return Scaffold(
-            appBar: AppBar(
-              title: Text('Save Suggestions'),
-            ),
-            body: ListView(
-              children: divided,
-            ),
-          );
-        },
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Startup Name Generator'),
-        actions: <Widget>[
-          IconButton(icon: Icon(Icons.list), onPressed: _pushSaved),
-        ],
-      ),
-      body: _buildSuggestions(),
+      // initialRoute: '/',
+      // routes: {
+      //   '/': (BuildContext ctx) => (DefaultTabController(
+      //         length: 3,
+      //         child: Scaffold(
+      //           appBar: AppBar(
+      //             title: Text('Tabs Demo'),
+      //           ),
+      //           bottomNavigationBar: TabBar(
+      //             tabs: [
+      //               Tab(icon: Icon(Icons.directions_car)),
+      //               Tab(icon: Icon(Icons.directions_transit)),
+      //               Tab(icon: Icon(Icons.directions_bike)),
+      //             ],
+      //           ),
+      //           body: TabBarView(
+      //             children: [
+      //               RamdomWords(),
+      //               MyWidget(),
+      //               TestWidget(),
+      //             ],
+      //           ),
+      //         ),
+      //       )),
+      //   '/random_words': (BuildContext ctx) => RamdomWords(),
+      //   '/my_widget': (BuildContext ctx) => MyWidget(),
+      //   '/test': (BuildContext ctx) => TestWidget(),
+      // },
     );
   }
 }
