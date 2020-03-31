@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'my_widget.dart';
 import 'random_words.dart';
 import 'test_widget.dart';
-import 'webview_flutter.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,7 +17,6 @@ class _MyAppState extends State<MyApp> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   final List<Widget> _widgetOptions = <Widget>[
     MyWidget(),
-    WebviewFlutter(),
     RandomWords(),
     TestWidget(),
   ];
@@ -58,10 +56,6 @@ class _MyAppState extends State<MyApp> {
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
                 title: Text('Home'),
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.web),
-                title: Text('Web'),
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.business),
