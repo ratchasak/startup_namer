@@ -10,14 +10,15 @@ class _TestWidgetState extends State<TestWidget> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.teal,
+      width: double.infinity,
       child: SafeArea(
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
               width: 100.0,
               color: Colors.red,
             ),
-            SizedBox(width: 50.0,),
             Container(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -35,7 +36,6 @@ class _TestWidgetState extends State<TestWidget> {
                 ],
               ),
             ),
-            SizedBox(width: 50.0,),
             Container(
               width: 100.0,
               color: Colors.blue,
