@@ -4,7 +4,25 @@ import 'my_widget.dart';
 import 'random_words.dart';
 import 'test_widget.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  String mySongs = sing();
+  print(mySongs);
+
+  runApp(MyApp());
+}
+String sing() {
+  var songs = List<String>();
+  var songString = '';
+  songs.add('aaaa');
+  songs.add('bbbb');
+  songs.add('cccc');
+  int i = 0;
+  while (i < songs.length) {
+    songString += '${songs[i]} - ';
+    i++;
+  }
+  return songString;
+}
 
 class MyApp extends StatefulWidget {
   @override
