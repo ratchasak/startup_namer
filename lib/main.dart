@@ -1,9 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import 'package:startup_namer/global.dart';
 import 'package:startup_namer/ui/screens/screens.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    // MultiProvider(
+    //   providers: [
+    //     ChangeNotifierProvider(create: (context) => CartModel()),
+    //     Provider(create: (context) => SomeOtherClass()),
+    //   ],
+    //   child: MyApp(),
+    // ),
+    MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -15,12 +26,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.blue,
       ),
-      initialRoute: '/',
+      initialRoute: calculatorRoute,
       routes: {
-        '/': (context) => MainScreen(),
+        initialRoute: (context) => MainScreen(),
         '/random_words': (context) => RandomWords(),
         '/my_widget': (context) => MyWidget(),
         '/test': (context) => TestWidget(),
+        calculatorRoute: (context) => Calculator(title: 'Calculator'),
       },
       // onGenerateRoute: (settings) {
 
