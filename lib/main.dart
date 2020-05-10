@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:startup_namer/global.dart';
-import 'package:startup_namer/ui/screens/screens.dart';
+import 'package:startup_namer/constants.dart';
+import 'package:startup_namer/pages/pages.dart';
 
 void main() {
   runApp(
