@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:startup_namer/constants.dart';
-import 'package:startup_namer/pages/pages.dart';
+import 'package:startup_namer/routes.dart';
 
 void main() {
   runApp(
@@ -26,17 +26,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.blue,
       ),
-      initialRoute: calculatorRoute,
-      routes: {
-        initialRoute: (context) => MainScreen(),
-        '/random_words': (context) => RandomWords(),
-        '/my_widget': (context) => MyWidget(),
-        '/test': (context) => TestWidget(),
-        calculatorRoute: (context) => Calculator(title: 'Calculator'),
-      },
-      // onGenerateRoute: (settings) {
-
-      // },
+      initialRoute: initialRoute,
+      onGenerateRoute: Routes.generateRoute,
     );
   }
 }
