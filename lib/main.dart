@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:startup_namer/constants.dart';
-import 'package:startup_namer/routes.dart';
+import 'package:startup_namer/router.dart' as router;
 
 void main() {
   runApp(
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.blue,
       ),
       initialRoute: initialRoute,
-      onGenerateRoute: Routes.generateRoute,
+      onGenerateRoute: router.generateRoute,
     );
   }
 }
