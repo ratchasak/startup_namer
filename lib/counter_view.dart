@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:provider/provider.dart';
+import 'package:stacked/stacked.dart';
 
 import 'package:startup_namer/counter_viewmodel.dart';
 
@@ -9,8 +9,8 @@ class CounterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ViewModelProvider is what provides the view model to the widget tree.
-    return ViewModelProvider<CounterViewModel>.withConsumer(
-      viewModel: CounterViewModel(),
+    return ViewModelBuilder<CounterViewModel>.reactive(
+      viewModelBuilder: () => CounterViewModel(),
       onModelReady: (model) => model.loadData(),
       builder: (context, model, child) => Scaffold(
         appBar: AppBar(

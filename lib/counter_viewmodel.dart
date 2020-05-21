@@ -1,9 +1,9 @@
-import 'package:flutter/foundation.dart';
+import 'package:stacked/stacked.dart';
 
 import 'package:startup_namer/service_locator.dart';
 import 'package:startup_namer/storage_service.dart';
 
-class CounterViewModel extends ChangeNotifier {
+class CounterViewModel extends BaseViewModel {
   int _counter = 0;
   int get counter => _counter;
 
