@@ -3,8 +3,10 @@ import 'package:provider/provider.dart';
 
 import 'package:startup_namer/constants.dart';
 import 'package:startup_namer/router.dart' as router;
+import 'package:startup_namer/service_locator.dart';
 
 void main() {
+  setupServiceLocator();
   runApp(
     // MultiProvider(
     //   providers: [

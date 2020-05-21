@@ -32,6 +32,11 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         builder: (_) => Calculator(title: 'Calculator'),
       );
       break;
+    case providerRoute:
+      return MaterialPageRoute(
+        builder: (_) => ProviderScreen(),
+      );
+      break;
     default:
       return MaterialPageRoute(
         builder: (_) => Scaffold(

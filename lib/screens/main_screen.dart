@@ -41,6 +41,14 @@ class _MainScreenState extends State<MainScreen> {
           Container(
             child: RaisedButton(
               onPressed: () {
+                Navigator.pushNamed(context, providerRoute);
+              },
+              child: Text('provider'),
+            ),
+          ),
+          Container(
+            child: RaisedButton(
+              onPressed: () {
                 Navigator.pushNamed(context, testRoute);
               },
               child: Text('test'),
