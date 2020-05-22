@@ -17,6 +17,14 @@ class _MainScreenState extends State<MainScreen> {
           Container(
             child: RaisedButton(
               onPressed: () {
+                Navigator.pushNamed(context, calculatorRoute);
+              },
+              child: Text('calculator'),
+            ),
+          ),
+          Container(
+            child: RaisedButton(
+              onPressed: () {
                 Navigator.pushNamed(context, randomRoute);
               },
               child: Text('random'),
@@ -28,14 +36,6 @@ class _MainScreenState extends State<MainScreen> {
                 Navigator.pushNamed(context, myRoute);
               },
               child: Text('my'),
-            ),
-          ),
-          Container(
-            child: RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, calculatorRoute);
-              },
-              child: Text('calculator'),
             ),
           ),
           Container(

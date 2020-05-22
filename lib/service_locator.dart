@@ -3,8 +3,8 @@ import 'package:get_it/get_it.dart';
 import 'package:startup_namer/storage_service_fake.dart';
 import 'package:startup_namer/storage_service.dart';
 
-GetIt locator = GetIt.instance;
+GetIt getIt = GetIt.instance;
 
 setupServiceLocator() {
-  locator.registerLazySingleton<StorageService>(() => StorageServiceFake());
+  getIt.registerLazySingleton<StorageService>(() => StorageServiceFake());
 }

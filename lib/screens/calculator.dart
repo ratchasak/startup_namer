@@ -9,7 +9,7 @@ class Calculator extends StatefulWidget {
 
 class _MyHomePageState extends State<Calculator> {
   String _str;
-  
+
   @override
   void initState() {
     super.initState();
@@ -19,10 +19,18 @@ class _MyHomePageState extends State<Calculator> {
   @override
   Widget build(BuildContext context) {
     final mediaquery = MediaQuery.of(context);
-    if(mediaquery.orientation == Orientation.landscape){
-      return CalculateLandscape(key:widget.key, title: widget.title, str: this._str,);
+    if (mediaquery.orientation == Orientation.landscape) {
+      return CalculateLandscape(
+        key: widget.key,
+        title: widget.title,
+        str: this._str,
+      );
     }
-    return CalculatePotrait(key:widget.key, title: widget.title, str: this._str,);
+    return CalculatePotrait(
+      key: widget.key,
+      title: widget.title,
+      str: this._str,
+    );
   }
 }
 
@@ -30,68 +38,70 @@ class Compute {
   static String str = '0';
 
   static void add(String val) {
-    if(str.compareTo('0') == 0){
+    if (str.compareTo('0') == 0) {
       str = val;
-    }else{
+    } else {
       str += val;
     }
   }
 
-  static void clear(){
+  static void clear() {
     str = '0';
   }
 
-  static void delete(){
-    if(str.compareTo('0') != 0){
-      String temp = str.substring(0, str.length-1);      
+  static void delete() {
+    if (str.compareTo('0') != 0) {
+      String temp = str.substring(0, str.length - 1);
       str = temp == '' ? str = '0' : str = temp;
     }
   }
 
-  static String compute(){
+  static String compute() {
     List<String> lst = [];
     double result = 0;
     int start = 0;
-    for(int i = 0; i<str.length; i++){
-      if(str[i].compareTo('+') == 0){
+    for (int i = 0; i < str.length; i++) {
+      if (str[i].compareTo('+') == 0) {
         lst.add(str.substring(start, i));
         lst.add(str[i]);
-        start = i+1;
-      }else if(str[i].compareTo('-') == 0){
+        start = i + 1;
+      } else if (str[i].compareTo('-') == 0) {
         lst.add(str.substring(start, i));
         lst.add(str[i]);
-        start = i+1;
-      }else if(str[i].compareTo('*') == 0){
+        start = i + 1;
+      } else if (str[i].compareTo('*') == 0) {
         lst.add(str.substring(start, i));
         lst.add(str[i]);
-        start = i+1;
-      }else if(str[i].compareTo('/') == 0){
+        start = i + 1;
+      } else if (str[i].compareTo('/') == 0) {
         lst.add(str.substring(start, i));
         lst.add(str[i]);
-        start = i+1;
+        start = i + 1;
       }
     }
-    if(start<str.length){
+    if (start < str.length) {
       lst.add(str.substring(start, str.length));
     }
-    for(int i=0; i<lst.length; i++){
-      if(i==0){
+    for (int i = 0; i < lst.length; i++) {
+      if (i == 0) {
         result = double.parse(lst[i]);
-      }else if(i > 0 && double.tryParse(lst[i])!=null){
-        if(lst[i-1].compareTo('*') == 0){
+      } else if (i > 0 && double.tryParse(lst[i]) != null) {
+        if (lst[i - 1].compareTo('*') == 0) {
           result *= double.parse(lst[i]);
-        }else if(lst[i-1].compareTo('/') == 0){
+        } else if (lst[i - 1].compareTo('/') == 0) {
           result /= double.parse(lst[i]);
-        }else if(lst[i-1].compareTo('+') == 0){
+        } else if (lst[i - 1].compareTo('+') == 0) {
           result += double.parse(lst[i]);
-        }else if(lst[i-1].compareTo('-') == 0){
+        } else if (lst[i - 1].compareTo('-') == 0) {
           result -= double.parse(lst[i]);
-        }else{
+        } else {
           return "ERROR";
         }
       }
     }
-    return (result-result.truncate()) == 0 ? result.truncate().toString() : result.toString();
+    return (result - result.truncate()) == 0
+        ? result.truncate().toString()
+        : result.toString();
   }
 }
 
@@ -108,29 +118,29 @@ class _CalculateLandscape extends State<CalculateLandscape> {
   String _str;
   _CalculateLandscape(this._str);
 
-  void update(String val){
+  void update(String val) {
     Compute.add(val);
     setState(() {
       this._str = Compute.str;
     });
   }
 
-  void clear(){
+  void clear() {
     setState(() {
       Compute.clear();
       this._str = Compute.str;
     });
   }
 
-  void delete(){
+  void delete() {
     setState(() {
       Compute.delete();
       this._str = Compute.str;
     });
   }
 
-  void compute(){
-    if(Compute.str.compareTo('0') != 0){
+  void compute() {
+    if (Compute.str.compareTo('0') != 0) {
       setState(() {
         this._str = Compute.compute();
         Compute.str = this._str;
@@ -145,7 +155,7 @@ class _CalculateLandscape extends State<CalculateLandscape> {
       this._str = Compute.str;
     });
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -179,8 +189,12 @@ class _CalculateLandscape extends State<CalculateLandscape> {
                   CustomButton('7', () {}, 3, Colors.black12),
                   CustomButton('8', () {}, 3, Colors.black12),
                   CustomButton('9', () {}, 3, Colors.black12),
-                  CustomButton('C', () {clear();}, 3, Colors.black12),
-                  CustomButton('DEL', () {delete();}, 3, Colors.black12),
+                  CustomButton('C', () {
+                    clear();
+                  }, 3, Colors.black12),
+                  CustomButton('DEL', () {
+                    delete();
+                  }, 3, Colors.black12),
                   CustomButton('.', () {}, 3, Colors.black12),
                 ],
               ),
@@ -224,7 +238,8 @@ class CalculatePotrait extends StatefulWidget {
   final String str;
   final String title;
 
-  CalculatePotrait({Key key, @required this.title, @required this.str}): super(key:key);
+  CalculatePotrait({Key key, @required this.title, @required this.str})
+      : super(key: key);
   @override
   _CalculatePotraitState createState() => _CalculatePotraitState(this.str);
 }
@@ -233,29 +248,29 @@ class _CalculatePotraitState extends State<CalculatePotrait> {
   String _str;
   _CalculatePotraitState(this._str);
 
-  void update(String val){
+  void update(String val) {
     Compute.add(val);
     setState(() {
       this._str = Compute.str;
     });
   }
 
-  void clear(){
+  void clear() {
     setState(() {
       Compute.clear();
       this._str = Compute.str;
     });
   }
 
-  void delete(){
+  void delete() {
     setState(() {
       Compute.delete();
       this._str = Compute.str;
     });
   }
 
-  void compute(){
-    if(Compute.str.compareTo('0') != 0){
+  void compute() {
+    if (Compute.str.compareTo('0') != 0) {
       setState(() {
         this._str = Compute.compute();
         Compute.str = this._str;
@@ -270,6 +285,7 @@ class _CalculatePotraitState extends State<CalculatePotrait> {
       this._str = Compute.str;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -300,8 +316,12 @@ class _CalculatePotraitState extends State<CalculatePotrait> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  CustomButton('C', () {clear();}, 9, Colors.black12),
-                  CustomButton('DEL', () {delete();}, 3, Colors.black12),
+                  CustomButton('C', () {
+                    clear();
+                  }, 9, Colors.black12),
+                  CustomButton('DEL', () {
+                    delete();
+                  }, 3, Colors.black12),
                 ],
               ),
             ),
@@ -310,10 +330,18 @@ class _CalculatePotraitState extends State<CalculatePotrait> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  CustomButton('7', () {update('7');}, 3, Colors.black12),
-                  CustomButton('8', () {update('8');}, 3, Colors.black12),
-                  CustomButton('9', () {update('9');}, 3, Colors.black12),
-                  CustomButton('+', () {update('+');}, 3, Colors.black12),
+                  CustomButton('7', () {
+                    update('7');
+                  }, 3, Colors.black12),
+                  CustomButton('8', () {
+                    update('8');
+                  }, 3, Colors.black12),
+                  CustomButton('9', () {
+                    update('9');
+                  }, 3, Colors.black12),
+                  CustomButton('+', () {
+                    update('+');
+                  }, 3, Colors.black12),
                 ],
               ),
             ),
@@ -322,10 +350,18 @@ class _CalculatePotraitState extends State<CalculatePotrait> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  CustomButton('4', () {update('4');}, 3, Colors.black12),
-                  CustomButton('5', () {update('5');}, 3, Colors.black12),
-                  CustomButton('6', () {update('6');}, 3, Colors.black12),
-                  CustomButton('-', () {update('-');}, 3, Colors.black12),
+                  CustomButton('4', () {
+                    update('4');
+                  }, 3, Colors.black12),
+                  CustomButton('5', () {
+                    update('5');
+                  }, 3, Colors.black12),
+                  CustomButton('6', () {
+                    update('6');
+                  }, 3, Colors.black12),
+                  CustomButton('-', () {
+                    update('-');
+                  }, 3, Colors.black12),
                 ],
               ),
             ),
@@ -334,10 +370,18 @@ class _CalculatePotraitState extends State<CalculatePotrait> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  CustomButton('1', () {update('1');}, 3, Colors.black12),
-                  CustomButton('2', () {update('2');}, 3, Colors.black12),
-                  CustomButton('3', () {update('3');}, 3, Colors.black12),
-                  CustomButton('*', () {update('*');}, 3, Colors.black12),
+                  CustomButton('1', () {
+                    update('1');
+                  }, 3, Colors.black12),
+                  CustomButton('2', () {
+                    update('2');
+                  }, 3, Colors.black12),
+                  CustomButton('3', () {
+                    update('3');
+                  }, 3, Colors.black12),
+                  CustomButton('*', () {
+                    update('*');
+                  }, 3, Colors.black12),
                 ],
               ),
             ),
@@ -346,10 +390,18 @@ class _CalculatePotraitState extends State<CalculatePotrait> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  CustomButton('0', () {update('0');}, 3, Colors.black12),
-                  CustomButton('.', () {update('.');}, 3, Colors.black12),
-                  CustomButton('=', () {compute();}, 3, Colors.black12),
-                  CustomButton('/', () {update('/');}, 3, Colors.black12),
+                  CustomButton('0', () {
+                    update('0');
+                  }, 3, Colors.black12),
+                  CustomButton('.', () {
+                    update('.');
+                  }, 3, Colors.black12),
+                  CustomButton('=', () {
+                    compute();
+                  }, 3, Colors.black12),
+                  CustomButton('/', () {
+                    update('/');
+                  }, 3, Colors.black12),
                 ],
               ),
             )
@@ -372,19 +424,19 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       flex: this._flexvalue,
-          child: Container(
+      child: Container(
         // child: Expanded(
         //   flex: this._flexvalue,
         padding: EdgeInsets.all(0.5),
-          child: FlatButton(
-            child: Text(
-              this._value,
-              style: TextStyle(color: Colors.black, fontSize: 28),
-            ),
-            onPressed: this._funct,
-            color: this._bgcolor,
+        child: FlatButton(
+          child: Text(
+            this._value,
+            style: TextStyle(color: Colors.black, fontSize: 28),
           ),
+          onPressed: this._funct,
+          color: this._bgcolor,
         ),
+      ),
     );
     // );
   }
