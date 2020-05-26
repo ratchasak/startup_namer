@@ -2,8 +2,16 @@
 // https://medium.com/flutter-community/clean-navigation-in-flutter-using-generated-routes-891bd6e000df
 import 'package:flutter/material.dart';
 
-import 'package:startup_namer/constants.dart';
-import 'package:startup_namer/screens/screens.dart';
+import 'package:startup_namer/common/constants.dart';
+import 'package:startup_namer/screens/calculator.dart';
+import 'package:startup_namer/screens/cart.dart';
+import 'package:startup_namer/screens/catalog.dart';
+import 'package:startup_namer/screens/login.dart';
+import 'package:startup_namer/screens/main_screen.dart';
+import 'package:startup_namer/screens/my_widget.dart';
+import 'package:startup_namer/screens/provider_screen.dart';
+import 'package:startup_namer/screens/random_words.dart';
+import 'package:startup_namer/screens/test_widget.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -35,6 +43,21 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case providerRoute:
       return MaterialPageRoute(
         builder: (_) => ProviderScreen(),
+      );
+      break;
+    case loginRoute:
+      return MaterialPageRoute(
+        builder: (_) => LoginScreen(),
+      );
+      break;
+    case catalogRoute:
+      return MaterialPageRoute(
+        builder: (_) => CatalogScreen(),
+      );
+      break;
+    case cartRoute:
+      return MaterialPageRoute(
+        builder: (_) => CartScreen(),
       );
       break;
     default:

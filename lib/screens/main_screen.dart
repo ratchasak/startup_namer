@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:startup_namer/constants.dart';
+import 'package:startup_namer/common/constants.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -52,6 +52,14 @@ class _MainScreenState extends State<MainScreen> {
                 Navigator.pushNamed(context, testRoute);
               },
               child: Text('test'),
+            ),
+          ),
+          Container(
+            child: RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, loginRoute);
+              },
+              child: Text('provider_shopper'),
             ),
           ),
         ],

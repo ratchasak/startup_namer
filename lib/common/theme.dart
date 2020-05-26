@@ -1,6 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+final appTheme = ThemeData(
+  primarySwatch: Colors.yellow,
+  textTheme: TextTheme(
+    headline1: TextStyle(
+      fontFamily: 'Corben',
+      fontWeight: FontWeight.w700,
+      fontSize: 24,
+      color: Colors.black,
+    ),
+  ),
+);
+
 ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     visualDensity: VisualDensity(vertical: 0.5, horizontal: 0.5),
