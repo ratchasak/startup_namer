@@ -22,13 +22,19 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Camera Usage Description</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Location Always and When In Use Usage Description</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Location Always Usage Description</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Microphone Usage Description</string>
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>fetch</string>
 		<string>location</string>
+		<string>processing</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -49,5 +55,10 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.transistorsoft.fetch</string>
+		<string>com.transistorsoft.customtask</string>
+	</array>
 </dict>
 </plist>

@@ -1,5 +1,9 @@
 PODS:
+  - background_fetch (0.5.5):
+    - Flutter
   - background_locator (0.0.1):
+    - Flutter
+  - camera (0.0.1):
     - Flutter
   - connectivity (0.0.1):
     - Flutter
@@ -52,7 +56,9 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
+  - background_fetch (from `.symlinks/plugins/background_fetch/ios`)
   - background_locator (from `.symlinks/plugins/background_locator/ios`)
+  - camera (from `.symlinks/plugins/camera/ios`)
   - connectivity (from `.symlinks/plugins/connectivity/ios`)
   - connectivity_macos (from `.symlinks/plugins/connectivity_macos/ios`)
   - device_info (from `.symlinks/plugins/device_info/ios`)
@@ -82,8 +88,12 @@ SPEC REPOS:
     - Reachability
 
 EXTERNAL SOURCES:
+  background_fetch:
+    :path: ".symlinks/plugins/background_fetch/ios"
   background_locator:
     :path: ".symlinks/plugins/background_locator/ios"
+  camera:
+    :path: ".symlinks/plugins/camera/ios"
   connectivity:
     :path: ".symlinks/plugins/connectivity/ios"
   connectivity_macos:
@@ -128,7 +138,9 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/webview_flutter/ios"
 
 SPEC CHECKSUMS:
+  background_fetch: 733393ca9893eadff0f7297a3818afe57fd68cb1
   background_locator: fe84072e5be02da3e28a3bbca81293d6c7443df7
+  camera: 38cc83ae9a5667bb5a71c7d9edaf60a91920fd4e
   connectivity: c4130b2985d4ef6fd26f9702e886bd5260681467
   connectivity_macos: e2e9731b6b22dda39eb1b128f6969d574460e191
   device_info: d7d233b645a32c40dfdc212de5cf646ca482f175
