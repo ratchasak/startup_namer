@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "795500353977",
+    "firebase_url": "https://startupnamer-62281.firebaseio.com",
+    "project_id": "startupnamer-62281",
+    "storage_bucket": "startupnamer-62281.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795500353977:android:0a2c3b4872cef5af55be68",
+        "android_client_info": {
+          "package_name": "io.github.ratchasak.startupNamer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "795500353977-unvile6ihkaqkh9jn2j64q91upid37li.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHs38S6oAz_BCLCXeV6zRO8K0yDAPnoXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "795500353977-unvile6ihkaqkh9jn2j64q91upid37li.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "795500353977-4kj1qcuh4dqd9soqj685pieuvglp781q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.github.ratchasak.startupNamer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

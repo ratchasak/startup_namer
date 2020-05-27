@@ -30,10 +30,14 @@ dependencies:
   cupertino_icons: ^0.1.3
   # Verified publishers
   camera: ^0.5.8+2
+  cloud_firestore: ^0.13.6
   connectivity: ^0.4.8+6
   device_info: ^0.4.2+4
-  # firebase_core: ^0.4.5
-  # firebase_database: ^3.1.6
+  firebase_analytics: ^5.0.14
+  firebase_auth: ^0.16.1
+  firebase_crashlytics: ^0.1.3+3
+  firebase_in_app_messaging: ^0.1.2
+  firebase_messaging: ^6.0.16
   flutter_local_notifications: ^1.4.3
   geolocator: ^5.3.1
   get_it: ^4.0.2
