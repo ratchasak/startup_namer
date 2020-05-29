@@ -8,8 +8,6 @@ import 'package:startup_namer/screens/cart.dart';
 import 'package:startup_namer/screens/catalog.dart';
 import 'package:startup_namer/screens/login.dart';
 import 'package:startup_namer/screens/main_screen.dart';
-import 'package:startup_namer/screens/my_widget.dart';
-import 'package:startup_namer/screens/provider_screen.dart';
 import 'package:startup_namer/screens/random_words.dart';
 import 'package:startup_namer/screens/test_widget.dart';
 
@@ -25,11 +23,6 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         builder: (_) => RandomWords(),
       );
       break;
-    case myRoute:
-      return MaterialPageRoute(
-        builder: (_) => MyWidget(),
-      );
-      break;
     case testRoute:
       return MaterialPageRoute(
         builder: (_) => TestWidget(),
@@ -38,11 +31,6 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case calculatorRoute:
       return MaterialPageRoute(
         builder: (_) => Calculator(title: 'Calculator'),
-      );
-      break;
-    case providerRoute:
-      return MaterialPageRoute(
-        builder: (_) => ProviderScreen(),
       );
       break;
     case loginRoute:

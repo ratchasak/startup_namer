@@ -13,38 +13,36 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       appBar: AppBar(),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Container(
-            child: RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, calculatorRoute);
-              },
-              child: Text('calculator'),
-            ),
-          ),
-          Container(
-            child: RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, randomRoute);
-              },
-              child: Text('random'),
-            ),
-          ),
-          Container(
-            child: RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, myRoute);
-              },
-              child: Text('my'),
-            ),
-          ),
-          Container(
-            child: RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, providerRoute);
-              },
-              child: Text('provider'),
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              Container(
+                child: RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, randomRoute);
+                  },
+                  child: Text('random'),
+                ),
+              ),
+              Container(
+                child: RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, calculatorRoute);
+                  },
+                  child: Text('calculator'),
+                ),
+              ),
+              Container(
+                child: RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, loginRoute);
+                  },
+                  child: Text('provider_shopper'),
+                ),
+              ),
+            ],
           ),
           Container(
             child: RaisedButton(
@@ -52,14 +50,6 @@ class _MainScreenState extends State<MainScreen> {
                 Navigator.pushNamed(context, testRoute);
               },
               child: Text('test'),
-            ),
-          ),
-          Container(
-            child: RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, loginRoute);
-              },
-              child: Text('provider_shopper'),
             ),
           ),
         ],
