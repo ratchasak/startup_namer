@@ -34,12 +34,25 @@ class _MainScreenState extends State<MainScreen> {
                   child: Text('calculator'),
                 ),
               ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
               Container(
                 child: RaisedButton(
                   onPressed: () {
                     Navigator.pushNamed(context, loginRoute);
                   },
                   child: Text('provider_shopper'),
+                ),
+              ),
+              Container(
+                child: RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, networkingRoute);
+                  },
+                  child: Text('netwoking'),
                 ),
               ),
             ],

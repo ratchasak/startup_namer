@@ -8,6 +8,7 @@ import 'package:startup_namer/screens/cart.dart';
 import 'package:startup_namer/screens/catalog.dart';
 import 'package:startup_namer/screens/login.dart';
 import 'package:startup_namer/screens/main_screen.dart';
+import 'package:startup_namer/screens/networking.dart';
 import 'package:startup_namer/screens/random_words.dart';
 import 'package:startup_namer/screens/test_widget.dart';
 
@@ -46,6 +47,11 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case cartRoute:
       return MaterialPageRoute(
         builder: (_) => CartScreen(),
+      );
+      break;
+    case networkingRoute:
+      return MaterialPageRoute(
+        builder: (_) => Networking(),
       );
       break;
     default:
