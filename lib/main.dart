@@ -3,13 +3,12 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show DeviceOrientation, SystemChrome;
 import 'package:provider/provider.dart';
-
-import 'package:startup_namer/common/constants.dart';
-import 'package:startup_namer/common/route.dart' as route;
-import 'package:startup_namer/common/theme.dart' as theme;
-import 'package:startup_namer/models/cart.dart';
-import 'package:startup_namer/models/catalog.dart';
-import 'package:startup_namer/view_model/album_list.dart';
+import 'common/constants.dart';
+import 'common/route.dart' as route;
+import 'common/theme.dart' as theme;
+import 'models/cart.dart';
+import 'models/catalog.dart';
+import 'view_model/album_list.dart';
 
 void main() {
   // enable network traffic logging

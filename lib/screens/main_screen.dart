@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:startup_namer/common/constants.dart';
+import '../common/constants.dart';
 
 class MainScreen extends StatefulWidget {
   @override

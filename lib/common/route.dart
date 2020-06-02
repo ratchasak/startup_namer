@@ -1,16 +1,15 @@
 // https://flutter.dev/docs/cookbook/navigation/navigate-with-arguments
 // https://medium.com/flutter-community/clean-navigation-in-flutter-using-generated-routes-891bd6e000df
 import 'package:flutter/material.dart';
-
-import 'package:startup_namer/common/constants.dart';
-import 'package:startup_namer/screens/calculator.dart';
-import 'package:startup_namer/screens/cart.dart';
-import 'package:startup_namer/screens/catalog.dart';
-import 'package:startup_namer/screens/login.dart';
-import 'package:startup_namer/screens/main_screen.dart';
-import 'package:startup_namer/screens/networking.dart';
-import 'package:startup_namer/screens/random_words.dart';
-import 'package:startup_namer/screens/test_widget.dart';
+import '../common/constants.dart';
+import '../screens/calculator.dart';
+import '../screens/cart.dart';
+import '../screens/catalog.dart';
+import '../screens/login.dart';
+import '../screens/main_screen.dart';
+import '../screens/networking.dart';
+import '../screens/random_words.dart';
+import '../screens/test_widget.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {

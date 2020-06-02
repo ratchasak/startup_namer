@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class Calculator extends StatefulWidget {
   Calculator({Key key, this.title}) : super(key: key);
@@ -14,6 +15,21 @@ class _MyHomePageState extends State<Calculator> {
   void initState() {
     super.initState();
     this._str = Compute.str;
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,      
+    ]);
+  }
+
+  @override
+  void dispose() {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,      
+    ]);
+    super.dispose();
   }
 
   @override

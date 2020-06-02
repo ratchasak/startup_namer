@@ -1,8 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
-import 'package:startup_namer/models/album.dart';
+import '../models/album.dart';
 
 class Networking extends StatefulWidget {
   @override
@@ -20,7 +19,7 @@ class _NetworkingState extends State<Networking> {
 
   Future<Album> fetchAlbum() async {
     final response =
-        await http.get('https://jsonplaceholder.typicode.com/albums/2');
+        await http.get('https://jsonplaceholder.typicode.com/albums/1');
 
     if (response.statusCode == 200) {
       return Album.fromJson(json.decode(response.body));
