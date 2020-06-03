@@ -70,6 +70,6 @@
         <!-- firebase_admob -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="[ADMOB_APP_ID]"/>
+            android:value="ca-app-pub-7167231977597063~1214470281"/>
     </application>
 </manifest>

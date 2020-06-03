@@ -3,11 +3,11 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show DeviceOrientation, SystemChrome;
 import 'package:provider/provider.dart';
-import 'common/constants.dart';
-import 'common/route.dart' as route;
-import 'common/theme.dart' as theme;
-import 'models/cart.dart';
-import 'models/catalog.dart';
+import './common/constants.dart';
+import './common/route.dart' as route;
+import './common/theme.dart' as theme;
+import './models/cart.dart';
+import './models/catalog.dart';
 import 'view_model/album_list.dart';
 
 void main() {

@@ -65,32 +65,17 @@
 	<false/>
 	<key>CFBundleURLTypes</key>
 	<array>
-		<!--
-		<dict>
-		... Some other CFBundleURLTypes definition.
-		</dict>
-		-->
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<!--
-				Replace "000000000000" with your Facebook App ID here.
-				**NOTE**: The scheme needs to start with `fb` and then your ID.
-				-->
 				<string>fb000000000000</string>
 			</array>
 		</dict>
 	</array>
-
 	<key>FacebookAppID</key>
-
-	<!-- Replace "000000000000" with your Facebook App ID here. -->
 	<string>000000000000</string>
 	<key>FacebookDisplayName</key>
-
-	<!-- Replace "YOUR_APP_NAME" with your Facebook App name. -->
 	<string>startupNamer</string>
-
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -99,6 +84,6 @@
 		<string>fbshareextension</string>
 	</array>
 	<key>GADApplicationIdentifier</key>
-	<string>[ADMOB_APP_ID]</string>
+	<string>ca-app-pub-7167231977597063~6505151956</string>
 </dict>
 </plist>

@@ -14,6 +14,11 @@ func registerPlugins(registry: FlutterPluginRegistry) -> () {
   ) -> Bool {
     GeneratedPluginRegistrant.register(with: self)
     BackgroundLocatorPlugin.setPluginRegistrantCallback(registerPlugins)
+    
+    if #available(iOS 10.0, *) {
+      UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
+    }
+    
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
 }
