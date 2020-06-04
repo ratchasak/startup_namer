@@ -1,0 +1,11 @@
+const String MainMenuViewRoute = 'MainMenuView';
+const String RandomViewRoute = 'RandomView';
+const String CalculatorViewRoute = 'CalculatorView';
+const String providerRoute = '/provider';
+const String myRoute = '/my_widget';
+const String testRoute = '/test';
+const String loginRoute = '/login';
+const String catalogRoute = '/catalog';
+const String cartRoute = '/cart';
+const String networkingRoute = '/networking';
+const String sharedPreferencesRoute = '/shared';

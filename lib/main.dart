@@ -3,14 +3,15 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show DeviceOrientation, SystemChrome;
 import 'package:provider/provider.dart';
-import './common/constants.dart';
-import './common/route.dart' as route;
-import './common/theme.dart' as theme;
-import './models/cart.dart';
-import './models/catalog.dart';
-import 'view_model/album_list.dart';
+import 'ui/router.dart';
+import 'locator.dart';
+// import 'models/cart.dart';
+// import 'models/catalog.dart';
+// import 'services/service_locator.dart';
+// import 'view_model/album_list.dart';
 
-void main() {
+Future<void> main() async {
+  await setupLocator()
   // enable network traffic logging
   HttpClient.enableTimelineLogging = true;
   WidgetsFlutterBinding.ensureInitialized();
@@ -109,7 +110,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       debugShowCheckedModeBanner: false,
       title: 'Startup Name Generator',
       theme: theme.appTheme,
-      initialRoute: initialRoute,
+      initialRoute: route.initialRoute,
       onGenerateRoute: route.generateRoute,
     );
   }

@@ -1,7 +1,4 @@
-// https://flutter.dev/docs/cookbook/navigation/navigate-with-arguments
-// https://medium.com/flutter-community/clean-navigation-in-flutter-using-generated-routes-891bd6e000df
 import 'package:flutter/material.dart';
-import '../common/constants.dart';
 import '../screens/calculator.dart';
 import '../screens/cart.dart';
 import '../screens/catalog.dart';
@@ -9,6 +6,7 @@ import '../screens/login.dart';
 import '../screens/main_screen.dart';
 import '../screens/networking.dart';
 import '../screens/random_words.dart';
+import '../screens/shared_preferences.dart';
 import '../screens/test_widget.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
@@ -51,6 +49,11 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case networkingRoute:
       return MaterialPageRoute(
         builder: (_) => Networking(),
+      );
+      break;
+    case sharedPreferencesRoute:
+      return MaterialPageRoute(
+        builder: (_) => SharedPreferences(),
       );
       break;
     default:
