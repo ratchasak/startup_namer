@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../common/route.dart' as route;
+import '../common/constants.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -20,7 +20,7 @@ class _MainScreenState extends State<MainScreen> {
               Container(
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, route.randomRoute);
+                    Navigator.pushNamed(context, randomRoute);
                   },
                   child: Text('random'),
                 ),
@@ -28,7 +28,7 @@ class _MainScreenState extends State<MainScreen> {
               Container(
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, route.calculatorRoute);
+                    Navigator.pushNamed(context, calculatorRoute);
                   },
                   child: Text('calculator'),
                 ),
@@ -41,7 +41,7 @@ class _MainScreenState extends State<MainScreen> {
               Container(
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, route.loginRoute);
+                    Navigator.pushNamed(context, loginRoute);
                   },
                   child: Text('provider_shopper'),
                 ),
@@ -49,7 +49,7 @@ class _MainScreenState extends State<MainScreen> {
               Container(
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, route.networkingRoute);
+                    Navigator.pushNamed(context, networkingRoute);
                   },
                   child: Text('netwoking'),
                 ),
@@ -59,15 +59,7 @@ class _MainScreenState extends State<MainScreen> {
           Container(
             child: RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, route.sharedPreferencesRoute);
-              },
-              child: Text('shared'),
-            ),
-          ),
-          Container(
-            child: RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, route.testRoute);
+                Navigator.pushNamed(context, testRoute);
               },
               child: Text('test'),
             ),

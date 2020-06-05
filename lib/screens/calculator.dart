@@ -24,10 +24,7 @@ class _MyHomePageState extends State<Calculator> {
   @override
   void dispose() {
     SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.landscapeRight,      
+      DeviceOrientation.portraitUp,   
     ]);
     super.dispose();
   }
