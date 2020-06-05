@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import '../models/album.dart';
+import '../datamodels/album.dart';
 
 class Webservice {
   Future<List<Album>> fetchAlbum() async {

@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import '../models/catalog.dart';
+import 'catalog.dart';
 
 class CartModel extends ChangeNotifier {
   /// The private field backing [catalog].

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import '../services/shared_preferences_util.dart';
 
-class SharedPreferences extends StatefulWidget {
+class SharedPreferencesView extends StatefulWidget {
   @override
-  _SharedPreferencesState createState() => _SharedPreferencesState();
+  _SharedPreferencesViewState createState() => _SharedPreferencesViewState();
 }
 
-class _SharedPreferencesState extends State<SharedPreferences> {
+class _SharedPreferencesViewState extends State<SharedPreferencesView> {
   var savedString = '';
 
   @override

@@ -11,7 +11,7 @@ import 'locator.dart';
 // import 'view_model/album_list.dart';
 
 Future<void> main() async {
-  await setupLocator()
+  await setupLocator();
   // enable network traffic logging
   HttpClient.enableTimelineLogging = true;
   WidgetsFlutterBinding.ensureInitialized();
@@ -111,7 +111,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       title: 'Startup Name Generator',
       theme: theme.appTheme,
       initialRoute: route.initialRoute,
-      onGenerateRoute: route.generateRoute,
+      onGenerateRoute: generateRoute,
     );
   }
 }
