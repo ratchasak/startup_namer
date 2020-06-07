@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-import '../common/constants.dart';
+import '../common/route.dart' as route;
 
-class MainScreen extends StatefulWidget {
-  @override
-  _MainScreenState createState() => _MainScreenState();
-}
-
-class _MainScreenState extends State<MainScreen> {
+class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +15,7 @@ class _MainScreenState extends State<MainScreen> {
               Container(
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, randomRoute);
+                    Navigator.pushNamed(context, route.randomRoute);
                   },
                   child: Text('random'),
                 ),
@@ -28,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
               Container(
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, calculatorRoute);
+                    Navigator.pushNamed(context, route.calculatorRoute);
                   },
                   child: Text('calculator'),
                 ),
@@ -41,7 +36,7 @@ class _MainScreenState extends State<MainScreen> {
               Container(
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, loginRoute);
+                    Navigator.pushNamed(context, route.loginRoute);
                   },
                   child: Text('provider_shopper'),
                 ),
@@ -49,7 +44,7 @@ class _MainScreenState extends State<MainScreen> {
               Container(
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, networkingRoute);
+                    Navigator.pushNamed(context, route.networkingRoute);
                   },
                   child: Text('netwoking'),
                 ),
@@ -59,7 +54,7 @@ class _MainScreenState extends State<MainScreen> {
           Container(
             child: RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, testRoute);
+                Navigator.pushNamed(context, route.testRoute);
               },
               child: Text('test'),
             ),
