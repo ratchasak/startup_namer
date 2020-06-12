@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import '../models/album.dart';
+import '../../business_logic/models/album.dart';
 
 class Networking extends StatefulWidget {
   Networking({Key key}) : super(key: key);

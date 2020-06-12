@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import '../models/album.dart';
-import '../services/webservice.dart';
+import '../../services/web_api/web_api_fake.dart';
 
 class AlbumListViewModel extends ChangeNotifier {
   List<AlbumViewModel> albums = List<AlbumViewModel>();
 
   Future<void> fetchAlbums() async {
-    final results = await Webservice().fetchAlbum();
+    final results = await FakeWebApi().fetchAlbum();
     this.albums = results.map((item) => AlbumViewModel(album: item)).toList();
     print(this.albums);
     notifyListeners();

@@ -1,5 +1,16 @@
 import 'package:flutter/material.dart';
-import '../common/route.dart' as route;
+
+const String initialRoute = '/';
+const String randomRoute = '/random_words';
+const String myRoute = '/my_widget';
+const String testRoute = '/test';
+const String calculatorRoute = '/calculator';
+const String providerRoute = '/provider';
+const String loginRoute = '/login';
+const String catalogRoute = '/catalog';
+const String cartRoute = '/cart';
+const String networkingRoute = '/networking';
+const String moolaxRoute = '/moolax';
 
 class MyHomePage extends StatelessWidget {
   @override
@@ -15,7 +26,7 @@ class MyHomePage extends StatelessWidget {
               Container(
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, route.randomRoute);
+                    Navigator.pushNamed(context, randomRoute);
                   },
                   child: Text('random'),
                 ),
@@ -23,7 +34,7 @@ class MyHomePage extends StatelessWidget {
               Container(
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, route.calculatorRoute);
+                    Navigator.pushNamed(context, calculatorRoute);
                   },
                   child: Text('calculator'),
                 ),
@@ -36,7 +47,7 @@ class MyHomePage extends StatelessWidget {
               Container(
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, route.loginRoute);
+                    Navigator.pushNamed(context, loginRoute);
                   },
                   child: Text('provider_shopper'),
                 ),
@@ -44,7 +55,7 @@ class MyHomePage extends StatelessWidget {
               Container(
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, route.networkingRoute);
+                    Navigator.pushNamed(context, networkingRoute);
                   },
                   child: Text('netwoking'),
                 ),
@@ -54,7 +65,15 @@ class MyHomePage extends StatelessWidget {
           Container(
             child: RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, route.testRoute);
+                Navigator.pushNamed(context, moolaxRoute);
+              },
+              child: Text('moolax'),
+            ),
+          ),
+          Container(
+            child: RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, testRoute);
               },
               child: Text('test'),
             ),
