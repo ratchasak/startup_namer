@@ -31,8 +31,8 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'web_api.dart';
-import '../../business_logic/models/rate.dart';
-import '../../business_logic/models/album.dart';
+import '../../datamodels/rate.dart';
+import '../../datamodels/album.dart';
 
 // This class is the concrete implementation of [WebApi]. It contains the logic
 // to get the exchange rate data from api.exchangeratesapi.io. However, no other

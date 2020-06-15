@@ -5,10 +5,10 @@ class Calculator extends StatefulWidget {
   Calculator({Key key, this.title}) : super(key: key);
   final String title;
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _CalculatorState createState() => _CalculatorState();
 }
 
-class _MyHomePageState extends State<Calculator> {
+class _CalculatorState extends State<Calculator> {
   String _str;
 
   @override

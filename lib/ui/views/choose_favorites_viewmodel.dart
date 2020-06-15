@@ -29,17 +29,17 @@
  */
 
 import 'package:flutter/foundation.dart';
-import '../models/currency.dart';
-import '../models/rate.dart';
-import '../utils/iso_data.dart';
-import '../../services/service_locator.dart';
+import '../../app/locator.dart';
+import '../../datamodels/currency.dart';
+import '../../datamodels/rate.dart';
+import '../../services/iso_data.dart';
 import '../../services/currency/currency_service.dart';
 
 // This class manages choosing the favorite currencies to show on the main screen.
 // It also puts the choices in a form that is easy to display on a view. It
 // knows nothing about any particular view, though.
 class ChooseFavoritesViewModel extends ChangeNotifier {
-  final CurrencyService _currencyService = serviceLocator<CurrencyService>();
+  final CurrencyService _currencyService = locator<CurrencyService>();
 
   List<FavoritePresentation> _choices = [];
   List<Currency> _favorites = [];

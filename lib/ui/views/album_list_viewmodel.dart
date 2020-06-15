@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../models/album.dart';
+import '../../datamodels/album.dart';
 import '../../services/web_api/web_api_fake.dart';
 
 class AlbumListViewModel extends ChangeNotifier {

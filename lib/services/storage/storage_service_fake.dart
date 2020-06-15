@@ -29,8 +29,8 @@
  */
 
 import 'storage_service.dart';
-import '../../business_logic/models/currency.dart';
-import '../../business_logic/models/rate.dart';
+import '../../datamodels/currency.dart';
+import '../../datamodels/rate.dart';
 
 
 // This is not used in the final app, but I am leaving it in to show how you

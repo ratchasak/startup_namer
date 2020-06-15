@@ -29,18 +29,18 @@
  */
 
 import 'currency_service.dart';
-import '../../business_logic/models/currency.dart';
-import '../../business_logic/models/rate.dart';
+import '../../datamodels/currency.dart';
+import '../../datamodels/rate.dart';
 import '../../services/storage/storage_service.dart';
 import '../../services/web_api/web_api.dart';
-import '../../services/service_locator.dart';
+import '../../app/locator.dart';
 
 // This class is the concrete implementation of [CurrencyService]. It is a
 // wrapper around the WebApi and StorageService services. This way the view models
 // don't actually have to know anything about the web or storage details.
 class CurrencyServiceImpl implements CurrencyService {
-  WebApi _webApi = serviceLocator<WebApi>();
-  StorageService _storageService = serviceLocator<StorageService>();
+  WebApi _webApi = locator<WebApi>();
+  StorageService _storageService = locator<StorageService>();
 
   static final defaultFavorites = [Currency('EUR'), Currency('USD')];
 

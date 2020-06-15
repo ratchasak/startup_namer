@@ -28,8 +28,8 @@
  * THE SOFTWARE.
  */
 
-import '../../business_logic/models/currency.dart';
-import '../../business_logic/models/rate.dart';
+import '../../datamodels/currency.dart';
+import '../../datamodels/rate.dart';
 
 // This is the contract that all storage services must follow. Using an abstract
 // class like this allows you to swap concrete implementations. This is useful

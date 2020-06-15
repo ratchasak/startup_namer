@@ -30,8 +30,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../business_logic/view_models/choose_favorites_viewmodel.dart';
-import '../../services/service_locator.dart';
+import 'choose_favorites_viewmodel.dart';
+import '../../app/locator.dart';
 
 class ChooseFavoriteCurrencyScreen extends StatefulWidget {
   @override
@@ -41,7 +41,7 @@ class ChooseFavoriteCurrencyScreen extends StatefulWidget {
 
 class _ChooseFavoriteCurrencyScreenState
     extends State<ChooseFavoriteCurrencyScreen> {
-  ChooseFavoritesViewModel model = serviceLocator<ChooseFavoritesViewModel>();
+  ChooseFavoritesViewModel model = locator<ChooseFavoritesViewModel>();
 
   @override
   void initState() {

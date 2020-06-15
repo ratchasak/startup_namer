@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../business_logic/view_models/album_list_viewmodel.dart';
-import '../../services/service_locator.dart';
+import 'album_list_viewmodel.dart';
+import '../../app/locator.dart';
 
 // class AlbumList extends StatelessWidget {
 //   final List<AlbumViewModel> albums;
@@ -27,7 +27,7 @@ class TestWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // final vm = Provider.of<AlbumListViewModel>(context);
-    AlbumListViewModel model = serviceLocator<AlbumListViewModel>();
+    AlbumListViewModel model = locator<AlbumListViewModel>();
 
     return Scaffold(
       appBar: AppBar(

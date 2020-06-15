@@ -29,16 +29,16 @@
  */
 
 import 'package:flutter/foundation.dart';
-import '../models/currency.dart';
-import '../models/rate.dart';
-import '../utils/iso_data.dart';
+import '../../app/locator.dart';
+import '../../datamodels/currency.dart';
+import '../../datamodels/rate.dart';
 import '../../services/currency/currency_service.dart';
-import '../../services/service_locator.dart';
+import '../../services/iso_data.dart';
 
 // This class handles the currency conversion and puts it in a form convenient
 // for displaying on a view (though it known nothing about any particular view).
 class CalculateScreenViewModel extends ChangeNotifier {
-  final CurrencyService _currencyService = serviceLocator<CurrencyService>();
+  final CurrencyService _currencyService = locator<CurrencyService>();
 
   CurrencyPresentation _baseCurrency = defaultBaseCurrency;
   List<CurrencyPresentation> _quoteCurrencies = [];

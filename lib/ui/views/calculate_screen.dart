@@ -31,8 +31,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'choose_favorites.dart';
-import '../../business_logic/view_models/calculate_screen_viewmodel.dart';
-import '../../services/service_locator.dart';
+import 'calculate_screen_viewmodel.dart';
+import '../../app/locator.dart';
 
 class CalculateCurrencyScreen extends StatefulWidget {
   @override
@@ -41,7 +41,7 @@ class CalculateCurrencyScreen extends StatefulWidget {
 }
 
 class _CalculateCurrencyScreenState extends State<CalculateCurrencyScreen> {
-  CalculateScreenViewModel model = serviceLocator<CalculateScreenViewModel>();
+  CalculateScreenViewModel model = locator<CalculateScreenViewModel>();
   TextEditingController _controller;
 
   @override
