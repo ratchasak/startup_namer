@@ -35,7 +35,7 @@ packages:
       name: background_locator
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.5+1"
+    version: "1.1.7+1"
   boolean_selector:
     dependency: transitive
     description:
@@ -450,6 +450,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.8"
+  mockito:
+    dependency: "direct dev"
+    description:
+      name: mockito
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.1.1"
   nested:
     dependency: transitive
     description:
@@ -457,13 +464,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.4"
-  observable_ish:
-    dependency: transitive
-    description:
-      name: observable_ish
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.4"
   package_info:
     dependency: "direct main"
     description:
@@ -630,13 +630,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.9.3"
-  stacked:
-    dependency: "direct main"
-    description:
-      name: stacked
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.6.0"
   stream_channel:
     dependency: transitive
     description:

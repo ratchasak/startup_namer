@@ -30,8 +30,8 @@
 
 
 
-import '../../datamodels/currency.dart';
-import '../../datamodels/rate.dart';
+import '../../models/currency.dart';
+import '../../models/rate.dart';
 
 // This is the contract that all currency services must follow. Using an abstract
 // class like this allows you to swap concrete implementations. This is useful

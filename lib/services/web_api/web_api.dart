@@ -1,5 +1,5 @@
-import '../../datamodels/album.dart';
-import '../../datamodels/rate.dart';
+import '../../models/album.dart';
+import '../../models/rate.dart';
 
 abstract class WebApi {
   Future<List<Album>> fetchAlbum();

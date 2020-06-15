@@ -29,11 +29,11 @@
  */
 
 import 'currency_service.dart';
-import '../../datamodels/currency.dart';
-import '../../datamodels/rate.dart';
+import '../../app/locator.dart';
+import '../../models/currency.dart';
+import '../../models/rate.dart';
 import '../../services/storage/storage_service.dart';
 import '../../services/web_api/web_api.dart';
-import '../../app/locator.dart';
 
 // This class is the concrete implementation of [CurrencyService]. It is a
 // wrapper around the WebApi and StorageService services. This way the view models

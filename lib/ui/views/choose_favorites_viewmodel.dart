@@ -30,8 +30,8 @@
 
 import 'package:flutter/foundation.dart';
 import '../../app/locator.dart';
-import '../../datamodels/currency.dart';
-import '../../datamodels/rate.dart';
+import '../../models/currency.dart';
+import '../../models/rate.dart';
 import '../../services/iso_data.dart';
 import '../../services/currency/currency_service.dart';
 

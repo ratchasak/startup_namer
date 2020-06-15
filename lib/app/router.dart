@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import '../ui/views/my_home_page/my_home_page.dart';
+import '../ui/views/mvvm//mvvm_view.dart';
 import '../ui/views/calculator.dart';
 import '../ui/views/cart.dart';
 import '../ui/views/catalog.dart';
 import '../ui/views/login.dart';
-import '../ui/views/my_home_page/my_home_page.dart';
 import '../ui/views/networking.dart';
 import '../ui/views/random_words.dart';
 import '../ui/views/test_widget.dart';
@@ -16,6 +17,7 @@ abstract class Routes {
   static const testRoute = '/test';
   static const calculatorRoute = '/calculator';
   static const providerRoute = '/provider';
+  static const mvvmRoute = '/mvvm';
   static const loginRoute = '/login';
   static const catalogRoute = '/catalog';
   static const cartRoute = '/cart';
@@ -69,6 +71,11 @@ class Router {
       case Routes.moolaxRoute:
         return MaterialPageRoute(
           builder: (_) => CalculateCurrencyScreen(),
+        );
+        break;
+      case Routes.mvvmRoute:
+        return MaterialPageRoute(
+          builder: (_) => MvvmView(),
         );
         break;
       default:

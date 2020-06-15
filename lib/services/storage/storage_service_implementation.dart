@@ -31,8 +31,8 @@
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'storage_service.dart';
-import '../../datamodels/currency.dart';
-import '../../datamodels/rate.dart';
+import '../../models/currency.dart';
+import '../../models/rate.dart';
 
 // This class is the concrete implementation of [StorageService]. Internally
 // it uses shared preferences to save and retrieve data, but that is an

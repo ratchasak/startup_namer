@@ -1,4 +1,4 @@
-import 'package:stacked/stacked.dart';
+import '../../../app/base_viewmodel.dart';
 
 class MyHomePageViewModel extends BaseViewModel {
 

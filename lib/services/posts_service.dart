@@ -1,6 +1,6 @@
 import 'api.dart';
 import '../app/locator.dart';
-import '../datamodels/post.dart';
+import '../models/post.dart';
 
 class PostsService {
   final _api = locator<Api>();

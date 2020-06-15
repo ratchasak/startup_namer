@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stacked/stacked.dart';
 import 'my_home_page_viewmodel.dart';
-import '../../../app/locator.dart';
 import '../../../app/router.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -9,76 +7,79 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ViewModelBuilder.nonReactive(
-      builder: (context, model, child) {
-        return Scaffold(
-          appBar: AppBar(),
-          body: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+    return Scaffold(
+      appBar: AppBar(),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Container(
-                    child: RaisedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, Routes.randomRoute);
-                      },
-                      child: Text('random'),
-                    ),
-                  ),
-                  Container(
-                    child: RaisedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, Routes.calculatorRoute);
-                      },
-                      child: Text('calculator'),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Container(
-                    child: RaisedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, Routes.loginRoute);
-                      },
-                      child: Text('provider_shopper'),
-                    ),
-                  ),
-                  Container(
-                    child: RaisedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, Routes.networkingRoute);
-                      },
-                      child: Text('netwoking'),
-                    ),
-                  ),
-                ],
-              ),
               Container(
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, Routes.moolaxRoute);
+                    Navigator.pushNamed(context, Routes.randomRoute);
                   },
-                  child: Text('moolax'),
+                  child: Text('random'),
                 ),
               ),
               Container(
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, Routes.testRoute);
+                    Navigator.pushNamed(context, Routes.calculatorRoute);
                   },
-                  child: Text('test'),
+                  child: Text('calculator'),
                 ),
               ),
             ],
           ),
-        );
-      },
-      viewModelBuilder: () => MyHomePageViewModel(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              Container(
+                child: RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, Routes.loginRoute);
+                  },
+                  child: Text('provider_shopper'),
+                ),
+              ),
+              Container(
+                child: RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, Routes.mvvmRoute);
+                  },
+                  child: Text('mvvm'),
+                ),
+              ),
+              Container(
+                child: RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, Routes.networkingRoute);
+                  },
+                  child: Text('netwoking'),
+                ),
+              ),
+            ],
+          ),
+          Container(
+            child: RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, Routes.moolaxRoute);
+              },
+              child: Text('moolax'),
+            ),
+          ),
+          Container(
+            child: RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, Routes.testRoute);
+              },
+              child: Text('test'),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
