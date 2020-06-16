@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../models/cart.dart';
-import '../../models/catalog.dart';
+import 'package:startup_namer/models/cart.dart';
+import 'package:startup_namer/models/catalog.dart';
 
 class CatalogScreen extends StatelessWidget {
   @override

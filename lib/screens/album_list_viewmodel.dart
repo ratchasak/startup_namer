@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../models/album.dart';
-import '../../services/web_api/web_api_fake.dart';
+import 'package:startup_namer/models/album.dart';
+import 'package:startup_namer/services/web_api/web_api_fake.dart';
 
 class AlbumListViewModel extends ChangeNotifier {
   List<AlbumViewModel> albums = List<AlbumViewModel>();

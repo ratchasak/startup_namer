@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import '../ui/views/my_home_page/my_home_page.dart';
-import '../ui/views/mvvm//mvvm_view.dart';
-import '../ui/views/calculator.dart';
-import '../ui/views/cart.dart';
-import '../ui/views/catalog.dart';
-import '../ui/views/login.dart';
-import '../ui/views/networking.dart';
-import '../ui/views/random_words.dart';
-import '../ui/views/test_widget.dart';
-import '../ui/views/calculate_screen.dart';
+import 'package:startup_namer/screens/my_home_page/my_home_page.dart';
+import 'package:startup_namer/screens/mvvm//mvvm_view.dart';
+import 'package:startup_namer/screens/calculator.dart';
+import 'package:startup_namer/screens/cart.dart';
+import 'package:startup_namer/screens/catalog.dart';
+import 'package:startup_namer/screens/login.dart';
+import 'package:startup_namer/screens/networking.dart';
+import 'package:startup_namer/screens/random_words.dart';
+import 'package:startup_namer/screens/test_widget.dart';
+import 'package:startup_namer/screens/calculate_screen.dart';
 
 abstract class Routes {
   static const initialRoute = '/';

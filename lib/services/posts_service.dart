@@ -1,6 +1,6 @@
 import 'api.dart';
-import '../app/locator.dart';
-import '../models/post.dart';
+import 'package:startup_namer/app/locator.dart';
+import 'package:startup_namer/models/post.dart';
 
 class PostsService {
   final _api = locator<Api>();

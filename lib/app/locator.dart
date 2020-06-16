@@ -1,14 +1,15 @@
 import 'package:get_it/get_it.dart';
-import '../services/api.dart';
-import '../services/posts_service.dart';
-import '../services/currency/currency_service.dart';
-import '../services/currency/currency_service_implementation.dart';
-import '../services/storage/storage_service.dart';
-import '../services/storage/storage_service_implementation.dart';
-import '../services/web_api/web_api.dart';
-import '../services/web_api/web_api_implementation.dart';
-import '../ui/views/my_home_page/my_home_page_viewmodel.dart';
-import '../ui/views/mvvm/mvvm_viewmodel.dart';
+import 'package:startup_namer/services/api.dart';
+import 'package:startup_namer/services/posts_service.dart';
+import 'package:startup_namer/services/currency/currency_service.dart';
+import 'package:startup_namer/services/currency/currency_service_implementation.dart';
+import 'package:startup_namer/services/storage/storage_service.dart';
+import 'package:startup_namer/services/storage/storage_service_implementation.dart';
+import 'package:startup_namer/services/web_api/web_api.dart';
+import 'package:startup_namer/services/web_api/web_api_implementation.dart';
+import 'package:startup_namer/screens/album_list_viewmodel.dart';
+import 'package:startup_namer/screens/my_home_page/my_home_page_viewmodel.dart';
+import 'package:startup_namer/screens/mvvm/mvvm_viewmodel.dart';
 
 final locator = GetIt.instance;
 
@@ -21,4 +22,5 @@ void setupLocator() {
 
   locator.registerFactory<MyHomePageViewModel>(() => MyHomePageViewModel());
   locator.registerFactory<MvvmViewModel>(() => MvvmViewModel());
+  locator.registerFactory<AlbumListViewModel>(() => AlbumListViewModel());
 }

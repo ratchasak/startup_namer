@@ -30,8 +30,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'choose_favorites_viewmodel.dart';
-import '../../app/locator.dart';
+import 'package:startup_namer/app/locator.dart';
+import 'package:startup_namer/screens/choose_favorites_viewmodel.dart';
 
 class ChooseFavoriteCurrencyScreen extends StatefulWidget {
   @override

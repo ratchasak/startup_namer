@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'web_api.dart';
-import '../../models/album.dart';
-import '../../models/rate.dart';
+import 'package:startup_namer/models/album.dart';
+import 'package:startup_namer/models/rate.dart';
+import 'package:startup_namer/services/web_api/web_api.dart';
 
 const String apiUrl = 'https://jsonplaceholder.typicode.com/todos/1';
 

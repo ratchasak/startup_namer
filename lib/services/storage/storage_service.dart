@@ -28,8 +28,8 @@
  * THE SOFTWARE.
  */
 
-import '../../models/currency.dart';
-import '../../models/rate.dart';
+import 'package:startup_namer/models/currency.dart';
+import 'package:startup_namer/models/rate.dart';
 
 // This is the contract that all storage services must follow. Using an abstract
 // class like this allows you to swap concrete implementations. This is useful

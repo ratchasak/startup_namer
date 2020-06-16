@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'my_home_page_viewmodel.dart';
-import '../../../app/router.dart';
+import 'package:startup_namer/app/router.dart';
+import 'package:startup_namer/screens/my_home_page/my_home_page_viewmodel.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key key}) : super(key: key);

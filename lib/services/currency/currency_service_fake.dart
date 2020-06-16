@@ -29,8 +29,8 @@
  */
 
 import 'currency_service.dart';
-import '../../models/currency.dart';
-import '../../models/rate.dart';
+import 'package:startup_namer/models/currency.dart';
+import 'package:startup_namer/models/rate.dart';
 
 // This class is just used temporarily during the tutorial so that the app can
 // run without crashing before the WebApi service is finished.

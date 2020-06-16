@@ -29,11 +29,11 @@
  */
 
 import 'package:flutter/foundation.dart';
-import '../../app/locator.dart';
-import '../../models/currency.dart';
-import '../../models/rate.dart';
-import '../../services/currency/currency_service.dart';
-import '../../services/iso_data.dart';
+import 'package:startup_namer/app/locator.dart';
+import 'package:startup_namer/models/currency.dart';
+import 'package:startup_namer/models/rate.dart';
+import 'package:startup_namer/services/currency/currency_service.dart';
+import 'package:startup_namer/services/iso_data.dart';
 
 // This class handles the currency conversion and puts it in a form convenient
 // for displaying on a view (though it known nothing about any particular view).

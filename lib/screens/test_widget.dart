@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'album_list_viewmodel.dart';
-import '../../app/locator.dart';
+import 'package:startup_namer/app/locator.dart';
+import 'package:startup_namer/screens/album_list_viewmodel.dart';
 
 // class AlbumList extends StatelessWidget {
 //   final List<AlbumViewModel> albums;

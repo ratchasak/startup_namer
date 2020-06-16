@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import '../models/comment.dart';
-import '../models/post.dart';
-import '../models/user.dart';
+import 'package:startup_namer/models/comment.dart';
+import 'package:startup_namer/models/post.dart';
+import 'package:startup_namer/models/user.dart';
 
 class Api {
   static const endPoint = 'https://jsonplaceholder.typicode.com';

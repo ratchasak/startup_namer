@@ -28,10 +28,9 @@
  * THE SOFTWARE.
  */
 
-import 'storage_service.dart';
-import '../../models/currency.dart';
-import '../../models/rate.dart';
-
+import 'package:startup_namer/models/currency.dart';
+import 'package:startup_namer/models/rate.dart';
+import 'package:startup_namer/services/storage/storage_service.dart';
 
 // This is not used in the final app, but I am leaving it in to show how you
 // could use fake data during development. This lets you work on your core business
