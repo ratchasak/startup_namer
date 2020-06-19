@@ -1,5 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:startup_namer/services/api.dart';
+import 'package:startup_namer/services/local_storage_service/shared_preferences_service.dart';
 import 'package:startup_namer/services/posts_service.dart';
 import 'package:startup_namer/services/currency/currency_service.dart';
 import 'package:startup_namer/services/currency/currency_service_implementation.dart';
@@ -13,7 +14,9 @@ import 'package:startup_namer/screens/mvvm/mvvm_viewmodel.dart';
 
 final locator = GetIt.instance;
 
-void setupLocator() {
+Future setupLocator() async {
+  locator.registerLazySingleton<SharedPreferencesService>(() => SharedPreferencesService());
+  
   locator.registerLazySingleton<Api>(() => Api());
   locator.registerLazySingleton<PostsService>(() => PostsService());
   locator.registerLazySingleton<WebApi>(() => WebApiImpl());

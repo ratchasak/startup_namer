@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:startup_namer/app/locator.dart';
 import 'package:startup_namer/app/router.dart';
 
-void main() {
-  setupLocator();
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await setupLocator();
   runApp(MyApp());
 }
 

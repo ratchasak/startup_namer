@@ -73,6 +73,14 @@ class MyHomePage extends StatelessWidget {
           Container(
             child: RaisedButton(
               onPressed: () {
+                Navigator.pushNamed(context, Routes.testScreenRoute);
+              },
+              child: Text('test_screen'),
+            ),
+          ),
+          Container(
+            child: RaisedButton(
+              onPressed: () {
                 Navigator.pushNamed(context, Routes.testRoute);
               },
               child: Text('test'),

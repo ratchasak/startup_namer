@@ -7,6 +7,7 @@ import 'package:startup_namer/screens/catalog.dart';
 import 'package:startup_namer/screens/login.dart';
 import 'package:startup_namer/screens/networking.dart';
 import 'package:startup_namer/screens/random_words.dart';
+import 'package:startup_namer/screens/test_screen/test_screen.dart';
 import 'package:startup_namer/screens/test_widget.dart';
 import 'package:startup_namer/screens/calculate_screen.dart';
 
@@ -23,6 +24,7 @@ abstract class Routes {
   static const cartRoute = '/cart';
   static const networkingRoute = '/networking';
   static const moolaxRoute = '/moolax';
+  static const testScreenRoute = '/test_screen';
 }
 
 class Router {
@@ -76,6 +78,11 @@ class Router {
       case Routes.mvvmRoute:
         return MaterialPageRoute(
           builder: (_) => MvvmView(),
+        );
+        break;
+      case Routes.testScreenRoute:
+        return MaterialPageRoute(
+          builder: (_) => TestScreen(),
         );
         break;
       default:
