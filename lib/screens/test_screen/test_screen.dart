@@ -7,7 +7,26 @@ class TestScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<TestScreenViewModel>.reactive(
       builder: (context, model, child) => Scaffold(
-        body: Center(),
+        body: !model.hasSelectedImage
+            ? Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  MaterialButton(
+                    color: Colors.blue,
+                    child: Text('Pick an image'),
+                    onPressed: () => model.selectImage(fromGallery: true),
+                  ),
+                  MaterialButton(
+                    color: Colors.yellow,
+                    child: Text('Take an image'),
+                    onPressed: () => model.selectImage(fromGallery: false),
+                  ),
+                ],
+              )
+            : model.isBusy
+                ? CircularProgressIndicator()
+                : Image.file(model.selectedImage),
       ),
       viewModelBuilder: () => TestScreenViewModel(),
     );
