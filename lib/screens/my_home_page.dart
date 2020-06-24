@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:startup_namer/app/router.dart';
-import 'package:startup_namer/screens/my_home_page/my_home_page_viewmodel.dart';
+import 'package:startup_namer/services/router.dart';
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key key}) : super(key: key);
+  MyHomePage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -47,14 +46,6 @@ class MyHomePage extends StatelessWidget {
               Container(
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, Routes.mvvmRoute);
-                  },
-                  child: Text('mvvm'),
-                ),
-              ),
-              Container(
-                child: RaisedButton(
-                  onPressed: () {
                     Navigator.pushNamed(context, Routes.networkingRoute);
                   },
                   child: Text('netwoking'),
@@ -65,25 +56,9 @@ class MyHomePage extends StatelessWidget {
           Container(
             child: RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, Routes.moolaxRoute);
-              },
-              child: Text('moolax'),
-            ),
-          ),
-          Container(
-            child: RaisedButton(
-              onPressed: () {
                 Navigator.pushNamed(context, Routes.testScreenRoute);
               },
               child: Text('test_screen'),
-            ),
-          ),
-          Container(
-            child: RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, Routes.testRoute);
-              },
-              child: Text('test'),
             ),
           ),
         ],
