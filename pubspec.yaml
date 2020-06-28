@@ -29,6 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons:
   # Verified publishers
+  battery: ^1.0.1
   camera:
   cloud_firestore: ^0.13.6
   cloud_functions: ^0.5.0
@@ -49,10 +50,13 @@ dependencies:
   google_fonts: ^1.1.0
   http:
   image_picker: ^0.6.6+5
+  location: ^3.0.2
   package_info: ^0.4.0+18
   path:
   path_provider:
   provider:
+  sensors: ^0.4.2+2
+  share: ^0.6.4+3
   shared_preferences:
   sqflite: ^1.3.0+1
   url_launcher: ^5.4.10

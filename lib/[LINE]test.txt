@@ -14,7 +14,6 @@ Android Studio
 
 F8, Google I/O, WWDC, GDC
 
-CrossCode
 "Nothing Changes Until You Do"
 When a leader moves an inch, the company moves a mile
 
@@ -221,3 +220,6 @@ https://mangaza.com/?page=Cartoon.ShowCartoon&cartoonID=43
 https://events.withgoogle.com/flutter-day/codelabs/#content
 https://codepen.io/mkiisoft/pen/ExVXNze
 https://sentry.io/
+https://leetcode.com/explore/learn/
+https://dennybritz.com/blog/ai-trading/
+https://app.netlify.com/teams/ratchasak/sites
