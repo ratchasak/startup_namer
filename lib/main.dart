@@ -1,12 +1,13 @@
 import 'dart:async';
-
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sentry/sentry.dart';
+// import 'package:sentry/sentry.dart';
 import 'package:startup_namer/models/cart.dart';
 import 'package:startup_namer/models/catalog.dart';
 import 'package:startup_namer/services/router.dart';
 
+/*
 const String dsn = 'https://87ff174cd80a41b1bb96f631cbe0b411@o412820.ingest.sentry.io/5293667';
 final SentryClient _sentry = new SentryClient(dsn: dsn);
 
@@ -42,10 +43,6 @@ Future<Null> _reportError(dynamic error, dynamic stackTrace) async {
   }
 }
 
-//void main() {
-//  runApp(MyApp());
-//}
-
 Future<Null> main() async {
   // This captures errors reported by the Flutter framework.
   FlutterError.onError = (FlutterErrorDetails details) async {
@@ -76,8 +73,61 @@ Future<Null> main() async {
     await _reportError(error, stackTrace);
   });
 }
+*/
 
-class MyApp extends StatelessWidget {
+class Bicycle {
+  int cadence;
+  int speed;
+  int gear;
+
+  Bicycle(this.cadence, this.speed, this.gear);
+
+  @override
+  String toString() => 'Bicycle: $speed mph';
+}
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  var bike = Bicycle(2, 0, 1);
+  print(bike);
+
+  // Set `enableInDevMode` to true to see reports while in debug mode
+  // This is only to be used for confirming that reports are being
+  // submitted as expected. It is not intended to be used for everyday
+  // development.
+  Crashlytics.instance.enableInDevMode = true;
+
+  // Pass all uncaught errors from the framework to Crashlytics.
+  FlutterError.onError = Crashlytics.instance.recordFlutterError;
+
+  runZoned(() {
+    runApp(MyApp());
+  }, onError: Crashlytics.instance.recordError);
+}
+
+//void main() {
+//  runApp(MyApp());
+//}
+
+class MyApp extends StatelessWidget with WidgetsBindingObserver {
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    switch (state) {
+      case AppLifecycleState.resumed:
+        print('resumed');
+        break;
+      case AppLifecycleState.inactive:
+        print('inactive');
+        break;
+      case AppLifecycleState.paused:
+        print('paused');
+        break;
+      case AppLifecycleState.detached:
+        print('detached');
+        break;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(

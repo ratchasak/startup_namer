@@ -37,6 +37,8 @@
 	<string>Microphone Usage Description</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Photo Library Usage Description</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Calendar Usage Description</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
