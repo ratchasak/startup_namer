@@ -12,6 +12,9 @@ iMovie, GarageBand
 
 Android Studio
 
+大魔女
+龍刀
+
 F8, Google I/O, WWDC, GDC
 
 "Nothing Changes Until You Do"
@@ -223,3 +226,7 @@ https://sentry.io/
 https://leetcode.com/explore/learn/
 https://dennybritz.com/blog/ai-trading/
 https://app.netlify.com/teams/ratchasak/sites
+https://adlrocha.substack.com/p/adlrocha-software-should-be-designed
+https://hugozap.com/posts/how-to-finish-your-side-project/
+https://unity.com/products/learn-premium
+https://blog.cloud66.com/3-tips-for-selecting-the-right-database-for-your-app/
