@@ -36,11 +36,8 @@ https://eugenkiss.github.io/7guis/
 https://www.espruino.com/Bangle.js
 https://toucharcade.com/2019/12/28/the-best-mobile-games-of-2019/
 https://toucharcade.com/2019/12/19/best-iphone-ipad-games-on-sale-2019/
-https://www.reddit.com/r/GameIdea/
-https://www.reddit.com/r/AppIdeas/
 https://heckj.github.io/swiftui-notes/
 https://swiftwithmajid.com/2019/10/23/reusing-swiftui-views-across-apple-platforms/
-https://www.reddit.com/r/DuelLinks/
 https://github.com/londonappbrewery/Flutter-Course-Resources
 https://m.9gag.com/gag/aXj72bD#_=_
 https://www.google.com/search?client=safari&rls=en&q=pokemon+go+clone&ie=UTF-8&oe=UTF-8
@@ -49,7 +46,6 @@ https://pad-esports.gungho.jp/tournament/2020tkyefes/
 https://www.patreon.com/potatogodzilla
 https://www.indiegogo.com
 https://www.kickstarter.com
-https://www.reddit.com/r/iOSProgramming/
 https://www.producthunt.com
 https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ
 https://www.youtube.com/channel/UClvg0_r-b-NGdpugQarey_A
@@ -230,3 +226,5 @@ https://adlrocha.substack.com/p/adlrocha-software-should-be-designed
 https://hugozap.com/posts/how-to-finish-your-side-project/
 https://unity.com/products/learn-premium
 https://blog.cloud66.com/3-tips-for-selecting-the-right-database-for-your-app/
+https://jvns.ca/blog/2014/09/27/how-does-sqlite-work-part-1-pages/
+https://trello.com

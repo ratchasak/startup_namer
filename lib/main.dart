@@ -88,6 +88,7 @@ class Bicycle {
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+
   var bike = Bicycle(2, 0, 1);
   print(bike);
 
